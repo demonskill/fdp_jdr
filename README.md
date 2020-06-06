@@ -27,8 +27,8 @@ Après avoir spécifier les caractéristiques, la manière de les déterminer et
 
   Dans le mode aléatoire la race et le sexe des personnages sont déterminés aléatoirement puis le nom  des personnages est déterminés aléatoirement, si vous souhaitez ajouter ou supprimer des noms, race ,sexe qui seront tirés aléatoirement il suffit  de :
 
-  - modifier un fichier listenom déja existant comme listenomhumain1.txt
-  - rajouter un fichier listenom qui devra impérativement être de la forme "listenom" + race + sexe(un caractère) + ".txt" comme par exemple **listenomorc1.txt**
+  - modifier un fichier listenom déja existant comme **listenom humain1.txt**
+  - rajouter un fichier listenom qui devra impérativement être de la forme "listenom " + race + sexe(un caractère) + ".txt" comme par exemple **listenom orc1.txt**
    
    ### Procédural
   

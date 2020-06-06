@@ -29,7 +29,8 @@ Après avoir spécifier les caractéristiques, la manière de les déterminer et
 
   - modifier un fichier listenom déja existant comme listenomhumain1.txt
   - rajouter un fichier listenom qui devra impérativement être de la forme "listenom" + race + sexe(un caractère) + ".txt" comme par exemple **listenomorc1.txt**
-   ### Procédural
+   
+   ### Procédural
   
   Dans le mode procédural, l'utilisateur choisit la race et le sexe de chaque personnage et leur nom est déterminé aléatoirement
 

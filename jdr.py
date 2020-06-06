@@ -1,7 +1,8 @@
 import math
 import random
 import os
-os.chdir(os.path.dirname(__file__))
+if len(os.path.dirname(__file__)) > 0  :
+    os.chdir(os.path.dirname(__file__))
 def roll(a):
     s=0
     ndice=0
@@ -154,7 +155,7 @@ while l < personbr :
         fname = "listenom " + race + sexe +".txt";
         while fname not in ftxt:
             print("ce sexe n'existe pas pour cette race ou alors n'est pas dans le dossier du programme");
-            réponse = input();
+            sexe = input();
             fname = "listenom " + race + sexe +".txt";
         file = open(fname,"r", encoding="utf-8");
         txt = file.readlines();

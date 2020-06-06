@@ -1,6 +1,7 @@
 import math
 import random
 import os
+os.chdir(os.path.dirname(__file__))
 def roll(a):
     s=0
     ndice=0
@@ -222,7 +223,7 @@ print("Voulez-vous exporter en csv (tableur) ? (y pour dire oui)");
 reponse = input();
 if reponse == "y": #export en csv
     import csv
-    with open('jdr.csv', 'w', newline='',encoding="ANSI") as csvfile:
+    with open('jdr.csv', 'w', newline='',encoding="utf8") as csvfile:
         writer = csv.writer(csvfile, delimiter=' ',)
         fieldnames = []
         while i <= c+2:

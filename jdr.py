@@ -6,6 +6,13 @@ if len(os.path.dirname(__file__)) > 0  :
 def roll(a):
     s=0
     ndice=0
+    if "*" in a :
+        for i in range(len(a)) :
+            if a[i]=="*" :
+                if "d" in a[:i] :
+                    return int(a[i+1:])*roll(a[:i])
+                else :
+                    return int(a[:i])*roll(a[i+1:])
     for i in range(len(a)) :
         if a[i]=="d" :
             ndice=int(a[:i])

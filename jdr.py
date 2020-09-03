@@ -45,7 +45,6 @@ def creation_perso(mode,tirage,svg) :
         race = input();
         print("Quel est le sexe du personnage n°",l+1,"?");
         sexe = input();
-        sexe = "sexe : " + sexe
     if mode == "p": #mode procédural (seul le nom est choisi aléatoirement)
         import os
         i = 0
@@ -84,7 +83,7 @@ def creation_perso(mode,tirage,svg) :
         nom = txt[rnum];
         nom = nom.rstrip();
         sexecon = ["N","M","F"]
-        sexe = "sexe : " + sexecon[int(sexe)]
+        sexe =sexecon[int(sexe)]
     if mode == "a": #mode automatique (purement aléatoire)
         import os
         i = 0
@@ -107,7 +106,7 @@ def creation_perso(mode,tirage,svg) :
         nom = txt[rnum];
         nom = nom.rstrip()
         sexecon = ["N","M","F"]
-        sexe = "sexe : " + sexecon[sexe]
+        sexe =sexecon[sexe]
     perso.append(nom);
     perso.append(race);
     perso.append(sexe);
@@ -132,12 +131,7 @@ def creation_perso(mode,tirage,svg) :
     file.close
     print (perso);
     i = 0;
-    ligneperso = "";
-    while b <= c+2: # pour permettre l'export de plusieurs personnage
-        t=str(perso[b])
-        ligneperso = ligneperso + "," + t ;
-        b= b+1;
-    return ligneperso
+    return perso
 
 def multicreation_perso(tirage,svg,listeperso) :
     print ("Combien de personnages vont être crées ?") #séléction du nombre de personnage
@@ -151,7 +145,7 @@ def multicreation_perso(tirage,svg,listeperso) :
     print("Comment voulez-vous que les noms, races, sexe soit choisi ? (m pour manuel, a pour aléatoire, p pour procédural")
     mode = input()
     for l in range(personbr) :
-        ligneperso = creation_perso(mode,tirage,svg)[1:]
+        ligneperso = creation_perso(mode,tirage,svg)
         listeperso.append(ligneperso)
     print("Voulez-vous tirer de nouveaux personnage ? (y pour dire oui)")
     rep=input()
@@ -248,5 +242,5 @@ if reponse == "y": #export en csv
         personnage =""
         for n in range(len(listeperso)):
             personnage = listeperso[n]
-            personnage = personnage.replace('"','')
-            writer.writerow([personnage]);
+            writer.writerow(personnage);
+
